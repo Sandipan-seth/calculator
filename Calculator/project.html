@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Kanit', sans-serif;
+        }
+
+        body {
+            background-image: linear-gradient(120deg, black, rgb(0, 0, 0), white);
+            /* background-color:black; */
+            background-repeat: no-repeat;
+            /* background-image: url(https://images.app.goo.gl/Kn9PMcyfYdEUj5Rm7) ; */
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .h1 {
+            text-align: center;
+            color: aliceblue;
+            margin: 0px 0px;
+            padding: 0px 0px;
+        }
+
+        .container {
+            /* background-color: rgb(234, 36, 18); */
+            border-radius: 20px;
+            /* border: 1px solid red; */
+            box-shadow: 1px 1px 20px rgba(255, 255, 255, 0.587);
+            /* box-shadow: 1px 1px 40px rgba(247, 243, 0, 0.587); */
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            /* height: 100vh; */
+            border: none;
+        }
+
+        .row {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .btn {
+            width: 50px;
+            height: 50px;
+            background-color: rgba(255, 255, 255, 0.162);
+            border: none;
+            box-shadow: 2px 2px 8px rgba(255, 255, 255, 0.541);
+            color: aliceblue;
+            text-shadow: 1px 1px 5px white;
+            padding: 10px 10px;
+            margin: 5px 5px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: larger;
+        }
+
+        .inp {
+            font-family: 'Orbitron', sans-serif;
+            width: 180px;
+            padding: 20px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            text-align: end;
+            color: white;
+            font-weight: bold;
+            background-color: rgba(22, 179, 8, 0.71);
+            
+
+        }
+
+        .opt {
+            background-color: rgba(255, 68, 0, 0.744);
+            color: rgb(8, 5, 5);
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.644);
+            font-weight: bolder;
+            font-size: 15px;
+            font-size: larger;
+        }
+
+        .btn:hover {
+            box-shadow: 2px 2px 8px black;
+            text-shadow: none;
+            background-color: rgba(60, 60, 60, 0.162);
+            color: rgb(94, 99, 103);
+        }
+
+        .opt:hover {
+            background-color: rgba(145, 39, 0, 0.744);
+            color: rgb(8, 5, 5);
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.381);
+            font-weight: bolder;
+            font-size: 15px;
+        }
+
+        .eql {
+            background-color: rgba(246, 255, 0, 0.744);
+            color: rgba(128, 0, 0, 0.842);
+            font-weight: bolder;
+            text-shadow: 1px 1px 5px rgba(128, 0, 0, 0.644);
+            font-size: larger;
+            width: 6.76rem;
+            border-radius: 100px;
+        }
+
+        .eql:hover {
+            background-color: rgba(159, 164, 7, 0.744);
+            color: rgba(128, 0, 0, 0.842);
+            font-weight: bolder;
+            text-shadow: 1px 1px 5px rgba(128, 0, 0, 0.644);
+            font-size: 15px;
+        }
+
+        #clock {
+            margin-top: 0;
+            /* background: #000; */
+            color: antiquewhite;
+            text-align: center;
+            width: 100%;
+            /* border: 1px solid red; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* background: #000; */
+        }
+
+        .sec {
+            /* background: black; */
+            color: wheat;
+            /* margin: 1rem 1rem; */
+            margin: 0;
+            /* padding: 2rem; */
+            font-size: 100px;
+            /* border: 1px solid red; */
+        }
+
+        P {
+            color: wheat;
+            font-size: 50px;
+        }
+
+        .time {
+            display: flex;
+        }
+
+        @media only screen and (max-width: 600px) {
+            body {
+                background-image: linear-gradient(-120deg, red, white, black);
+                background-repeat: no-repeat;
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+            }
+
+            /* #clock {
+                flex-direction: column;
+            } */
+
+            #clock p {
+                color: black;
+            }
+
+            .sec {
+                color: black;
+            }
+
+            .h1 {
+                color: black;
+                font-size: 10px;
+                /* display: none;     */
+            }
+
+            p {
+                font-size: 30px;
+            
+            }
+
+            .sec {
+                font-size: 50px;
+            }
+
+            .container {
+                background-color: rgba(44, 42, 42);
+                box-shadow: 1px 1px 20px rgb(0, 0, 0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="clock">
+        <P>TIME :</P>
+        <div class="time">
+            <div id="hr" class="sec"></div>
+            <div id="min" class="sec"></div>
+            <div id="sec" class="sec"></div>
+        </div>
+    </div>
+    <div class="h1">
+        <h1>SANDIPAN'S CALCULATOR</h1>
+    </div>
+    <div class="container">
+        <div class="input">
+            <input id="input" class="inp" type="text" placeholder="DISPLAY" disabled>
+        </div>
+        <div class="row">
+            <button class="btn opt">A/C</button>
+            <button class="btn opt">dlt</button>
+            <button class="btn opt">.</button>
+            <button class="btn opt">*</button>
+        </div>
+        <!-- <div class="row">
+            <button class="btn opt">1/2</button>
+            <button class="btn opt">2</button>
+            <button class="btn opt">cube</button>
+            <button class="btn opt">X</button>
+        </div> -->
+        <div class="row">
+            <button class="btn">9</button>
+            <button class="btn">8</button>
+            <button class="btn">7</button>
+            <button class="btn opt">/</button>
+        </div>
+        <div class="row">
+            <button class="btn">6</button>
+            <button class="btn">5</button>
+            <button class="btn">4</button>
+            <button class="btn opt">+</button>
+        </div>
+        <div class="row">
+            <button class="btn">3</button>
+            <button class="btn">2</button>
+            <button class="btn">1</button>
+            <button class="btn opt">-</button>
+        </div>
+        <div class="row">
+            <!-- <button class="btn">00</button> -->
+            <button class="btn">00</button>
+            <button class="btn">0</button>
+            <button class="btn eql">=</button>
+        </div>
+    </div>
+    <script>
+        function displaytime() {
+            const hr = document.getElementById('hr');
+            const min = document.getElementById('min');
+            const sec = document.getElementById('sec');
+            let time = new Date();
+            let hour = time.getHours();
+            let mint = time.getMinutes();
+            let seco = time.getSeconds();
+            min.innerHTML = mint + ":";
+            sec.innerHTML = seco;
+            hr.innerHTML = hour + ":";
+        }
+        // let year = newDate.getFullYear();
+        // console.log(year);
+        setInterval(displaytime, 1000);
+        let button = document.getElementsByClassName('btn');
+        let input = document.getElementById('input');
+        let arr = Array.from(button);
+        let string = "";
+        arr.forEach(button => {
+            button.addEventListener('click', (e) => {
+                if (e.target.innerHTML == '=') {
+                    string = eval(string);
+                    input.value = string;
+                }
+                else if (e.target.innerHTML == 'A/C') {
+                    string = "";
+                    input.value = string;
+                }
+                else if (e.target.innerHTML == 'dlt') {
+                    string = string.substring(0, string.length - 1);
+                    input.value = string;
+                }
+                else {
+                    string += e.target.innerHTML;
+                    input.value = string;
+                }
+            })
+        })
+        // console.log(arr);
+
+
+    </script>
+</body>
+
+</html>
